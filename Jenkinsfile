@@ -62,7 +62,7 @@ pipeline {
 
       stage('Docker Build and Push') {
       steps {
-          sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+          sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password Samvit@01'
           sh 'docker build -t rsekhark55/restaurant-listing-service:${VERSION} .'
           sh 'docker push rsekhark55/restaurant-listing-service:${VERSION}'
       }
